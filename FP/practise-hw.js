@@ -58,8 +58,8 @@ const stringArray = ["apple", "orange", "mango", "papaya"];
 
 // Q.a - Find then number of Strings with similar number of Characters.
 const output = stringArray.reduce((acc, curr) => {
-  console.log(curr.length);
-  console.log(acc[curr.length]);
+  // console.log(curr.length);
+  // console.log(acc[curr.length]);
   return curr.length in acc
     ? { ...acc, [curr.length]: acc[curr.length] + 1 }
     : { ...acc, [curr.length]: 1 };
@@ -75,13 +75,13 @@ console.log(output);
 // //2
 
 // Q.b - Return an array with strings which have vowels
-// const stringwithVowels = stringArray.reduce(
-//   (acc, curr) =>
-//     curr.includes[("a", "e", "i", "o", "u")] ? { ...acc, curr } : { ...acc },
-//   {}
-// );
+const stringwithVowels = stringArray.reduce(
+  (acc, curr) =>
+    curr.includes("a" || "e" || "i" || "o" || "u") ? [...acc, curr] : [...acc],
+  []
+);
 
-// console.log(stringwithVowels);
+console.log(stringwithVowels);
 
 // Q.c - Return an array of obj with key as item and value as number of charackers in the string
 const ObjStringChar = stringArray.reduce(
