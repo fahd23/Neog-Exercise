@@ -90,3 +90,23 @@ const ObjStringChar = stringArray.reduce(
 );
 
 console.log(ObjStringChar);
+
+// Currying
+const giveYourName = (name) => name;
+
+const message = (name) => (msg) => `${name} says ${msg} `;
+
+const fahdSays = message("Fahd");
+
+console.log(fahdSays("Hello"));
+console.log(message("Fahd")("Hello"));
+
+const add = (num1) => (num2) => num1 + num2;
+console.log(add(4)(4));
+
+//composition
+const userNameMsg = (msg) => `Fahd says, ${msg}`;
+const userIdMsg = (msg) => `ID : 1813FD :: ${msg}`;
+const userNameAndIdMsg = (msg) => userIdMsg(userNameMsg(msg));
+
+console.log(userNameAndIdMsg("Hello"));
