@@ -1,2 +1,2 @@
 # Neog-Exercise
-Doing my homework exercise given in NeoGcamp
+Exercise for practice javascript and react
